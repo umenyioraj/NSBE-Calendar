@@ -3,13 +3,13 @@ import React from "react";
 const Event = (props) => {
     return (
         <td className={'Event ' + props.color}> 
-            <h5>{props.event}</h5>
-            <h6>{props.location}</h6>
-        
-        </td>
+        <div className="event-container">
+            <p className="event-title">{props.title}</p>
+            <h5 className="event-details">Time:{props.time}</h5>
 
+        </div>  
+    </td>
     );
 }
-
 
 export default Event;

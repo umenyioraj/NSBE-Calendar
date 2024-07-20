@@ -5,7 +5,7 @@
   text-align: center;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   color: black;
-  background-color: white;
+  background-color: bisque;
 }
 
 
@@ -15,4 +15,60 @@
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: bisque;
+}
+
+.my-button {
+  font-size: 16px;
+  opacity: 0;
+}
+
+.logo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.logo {
+  width: 500px;
+  height: auto;
+}
+
+.calendar {
+  background-color: bisque;
+
+}
+
+.event-container {
+  border: 1px solid #8c08b4;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #d40ad8;
+  border-radius: 5px;
+}
+
+.event-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.event-details {
+  font-size: 14px;
+  color: #000000;
+}
+
+.login-container {
+  font-size: 30px;
+  position: top;
+  color:black;
+  padding: 20px;
+}
+
+
+.background-container {
+  background-image: url('./assets/nsbe-background.jpg'); /* Adjust path to your image */
+  position: absolute;
+  right:0;
+  bottom: 0;
 }
