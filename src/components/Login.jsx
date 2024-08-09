@@ -5,6 +5,7 @@ import NSBE from '../assets/NSBE.png'
 import '../App.css' 
 
 
+
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -47,9 +48,11 @@ const Login = () => {
       <div className='login-container'>
               <p>Welcome To Nova NSBE </p>
       </div>
+      <div className='login-logo'>
       <h2>Login</h2>
+      </div>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className='username-container'>
           <label>Username:</label>
           <input
             type="text"
@@ -57,7 +60,7 @@ const Login = () => {
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-        <div>
+        <div className='password-container'>
           <label>Password:</label>
           <input
             type="password"
@@ -65,7 +68,9 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
+        <div className='login-button'>
         <button type="submit">Login</button>
+        </div>
       </form>
     </div>
   );
