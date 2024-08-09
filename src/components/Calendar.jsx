@@ -1,9 +1,24 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Event from './Event'
 import NSBE from '../assets/NSBE.png'
 
 const Calendar = () => {
     const [events, setEvents] = useState([]);
+
+    useEffect(() => {
+        const fetchEvents = async() => {
+            try {
+                const response = await fetch('http://localhost:5000/api/events');
+                const data = await response.json();
+                setEvents(data);
+            } catch (error) {
+                console.log('Failed to fetch events',error);
+            }
+        };
+
+        fetchEvents();
+    }, []);
+
 
     const handleClick = async (day,time) => {
        const eventTitle = prompt('Enter event title:');
@@ -24,8 +39,8 @@ const Calendar = () => {
 
         const payload = {
             title: eventTitle,
-            date: eventDate,
-            time: eventTime,
+            day_of_week: eventDate,
+            time_of_day: eventTime,
         };
 
        try {
@@ -39,7 +54,6 @@ const Calendar = () => {
         if (response.ok) {
             const data = await response.json();
             console.log('Event added:',data.event);
-           // alert('New event added successfully!');
             setEvents([...events, data.event]); // Update state with new event
         } else {
             const errorData = await response.json();
@@ -56,6 +70,17 @@ const Calendar = () => {
         <div className='calendar-container'>
             <div className='logo-container'>
                 <img src={NSBE} alt="NSBE Event" className='logo' />
+            </div>
+            <div class='nav-table'>
+                <a>
+                <button>Scholarships</button>
+                </a>
+                <a href="https://convention.nsbe.org/" target="_blank">
+                <button>Conference</button>
+                </a>
+                <a>
+                <button>Contact Us</button>
+                </a>
             </div>
             <div className='calendar'>
                 <table>
@@ -79,9 +104,9 @@ const Calendar = () => {
                                     <td key={j}>
                                         <button className='my-button' onClick={() => handleClick(day, time)}>Add new event</button>
                                         {events.map((event, k) => {
-                                            if (event.date === day && event.time === time) {
+                                            if (event.day_of_week === day && event.time_of_day === time) {
                                                 return (
-                                                    <Event key={k} date={event.date} time={event.time} title={event.title}/>
+                                                    <Event key={k} date={event.day_of_week} time={event.time_of_day} title={event.title}/>
                                                 );
                                             } else {
                                                 return null;

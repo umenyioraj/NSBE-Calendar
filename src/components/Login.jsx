@@ -45,7 +45,7 @@ const Login = () => {
                 <img src={NSBE} alt="NSBE Event" className='logo' />
             </div>
       <div className='login-container'>
-              <p>Welcome to the NovaNsbe Fall 2024 Agenda </p>
+              <p>Welcome To Nova NSBE </p>
       </div>
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>

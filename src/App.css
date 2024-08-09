@@ -63,6 +63,7 @@
   position: top;
   color:black;
   padding: 20px;
+  font:600;
 }
 
 
@@ -71,4 +72,26 @@
   position: absolute;
   right:0;
   bottom: 0;
+}
+
+
+.nav-table 
+{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-table button {
+  margin-left: 20px;
+  padding: 10px 20px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  background-color: bisque;
+  font-size: 18px;
+
+}
+
+.nav-table button:hover {
+  background-color: white;
 }
