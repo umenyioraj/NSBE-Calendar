@@ -2,8 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const mysql = require('mysql2');
+require('dotenv').config();
+
 
 app.use(bodyParser.json());
 
@@ -19,8 +21,8 @@ let events = [];
 
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'umenyiorajosh@gmail.com',
-  password: 'Joshua10**',
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
   database: 'events_db'
 });
 
