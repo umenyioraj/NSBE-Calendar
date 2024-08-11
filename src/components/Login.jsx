@@ -17,7 +17,7 @@ const Login = () => {
     const payload = { username, password };
 
     try {
-        const response = await fetch('https://novansbe-d4egetdacug9bng0.eastus-01.azurewebsites.net/login', {
+        const response = await fetch('https://nsbe-calendar.onrender.com/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
