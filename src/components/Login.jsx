@@ -17,7 +17,7 @@ const Login = () => {
     const payload = { username, password };
 
     try {
-        const response = await fetch('http://localhost:5000/api/login', {
+        const response = await fetch('https://cool-strudel-042736.netlify.app/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
