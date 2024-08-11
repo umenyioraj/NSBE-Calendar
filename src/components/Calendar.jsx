@@ -14,7 +14,7 @@ const Calendar = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/events");
+                const response = await fetch("novansbe-d4egetdacug9bng0.eastus-01.azurewebsites.net/events");
                 const data = await response.json();
                 setEvents(data);
             } catch (error) {
@@ -44,7 +44,7 @@ const Calendar = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/events", {
+            const response = await fetch("novansbe-d4egetdacug9bng0.eastus-01.azurewebsites.net/events", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
