@@ -92,12 +92,12 @@
 
 .login-container{
   color: green;
-  font-family: cursive;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .login-logo{
   color: green;
-  font-family: cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .username-container, .password-container {
@@ -111,7 +111,7 @@
 
 
 .username-container, .password-container {
-  font-family: cursive; /* Change font family */
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Change font family */
   font-size: 16px; /* Increase font size */
   font-weight: bold; /* Bold text */
 }
@@ -202,24 +202,24 @@ input {
 .about-us-container h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: yellow;
-  font-family: cursive;
+  color: yellowgreen;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .about-us-container h2 {
   font-size: 1.2rem;
-  color:green;
-  font-family: cursive;
+  color:rgb(203, 205, 94);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .about-us-container p {
   font-size: 1.5rem;
   line-height: 1.6;
-  color: yellow;
-  font-family: cursive;
+  color: yellowgreen;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .about-us-container strong {
-  color: yellow;
+  color: yellowgreen;
 }
 
 .scholarship-container{
@@ -232,13 +232,13 @@ input {
 .scholarship-container{
   font-size: 2.0rem;
   margin-bottom: 20px;
-  color: rgb(255, 47, 0);
-  font-family: cursive;
+  color: yellowgreen;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .scholarship-container p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.6;
-  color: rgb(255, 47, 0);
-  font-family: cursive;
+  color: yellowgreen;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

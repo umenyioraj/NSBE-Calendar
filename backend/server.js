@@ -8,9 +8,9 @@ const mysql = require('mysql2');
 app.use(bodyParser.json());
 
 const corsOptions = {
-    origin: 'http://localhost:5173', // Allow requests from this origin
-    methods: ['GET', 'POST'], // Allow these HTTP methods
-    // Add other CORS options as needed
+    origin: 'https://cool-strudel-042736.netlify.app', 
+    methods: ['GET', 'POST'], 
+   
   };
   
 app.use(cors(corsOptions)); // Apply CORS middleware
