@@ -192,3 +192,53 @@ input {
   box-sizing: border-box;
 }
 
+.about-us-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-us-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: yellow;
+  font-family: cursive;
+}
+.about-us-container h2 {
+  font-size: 1.2rem;
+  color:green;
+  font-family: cursive;
+}
+
+.about-us-container p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: yellow;
+  font-family: cursive;
+}
+
+.about-us-container strong {
+  color: yellow;
+}
+
+.scholarship-container{
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.scholarship-container{
+  font-size: 2.0rem;
+  margin-bottom: 20px;
+  color: rgb(255, 47, 0);
+  font-family: cursive;
+}
+
+.scholarship-container p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: rgb(255, 47, 0);
+  font-family: cursive;
+}

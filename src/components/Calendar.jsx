@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import Event from "./Event";
 import NSBE from "../assets/NSBE.png";
 import '../App.css'
+import { useNavigate } from "react-router-dom";
 
 
 const Calendar = () => {
+    const navigate = useNavigate();
     const [events, setEvents] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [newEvent, setNewEvent] = useState({ title: "", day_of_week: "", time_of_day: "" });
@@ -64,7 +66,18 @@ const Calendar = () => {
             console.error("Error adding event", error);
             alert("Failed to add event. Please try again later.");
         }
+
     };
+
+    const handleAboutUsClick = () => {
+        navigate('/AboutUs');
+    };
+
+    const handleScholarshipsClick = () => {
+        navigate('/Scholarships');
+    }
+        
+    
 
     return (
         <div className="calendar-container">
@@ -73,13 +86,16 @@ const Calendar = () => {
             </div>
             <div className="nav-table">
                 <a>
-                    <button>Scholarships</button>
+                    <button onClick={handleScholarshipsClick}>Scholarships</button>
                 </a>
                 <a href="https://convention.nsbe.org/" target="_blank">
                     <button>Conference</button>
                 </a>
-                <a href="mailto:youremail@example.com">
+                <a href="mailto:novansbe@villanova.edu">
                     <button>Contact Us</button>
+                </a>
+                <a>
+                    <button onClick={handleAboutUsClick}>About Us</button>
                 </a>
             </div>
             <div className="calendar">
