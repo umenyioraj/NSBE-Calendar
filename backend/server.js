@@ -10,7 +10,7 @@ require('dotenv').config();
 app.use(bodyParser.json());
 
 const corsOptions = {
-    origin: 'https://cool-strudel-042736.netlify.app', 
+    origin: 'https://villanova-nsbe.netlify.app', 
     methods: ['GET', 'POST'], 
    
   };
