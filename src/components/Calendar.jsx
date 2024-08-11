@@ -14,7 +14,7 @@ const Calendar = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch("https://nsbe-calendar.onrender.com/events");
+                const response = await fetch("https://nsbe-calendar.onrender.com/api/events");
                 const data = await response.json();
                 setEvents(data);
             } catch (error) {
@@ -44,7 +44,7 @@ const Calendar = () => {
         }
 
         try {
-            const response = await fetch("https://nsbe-calendar.onrender.com/events", {
+            const response = await fetch("https://nsbe-calendar.onrender.com/api/events", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

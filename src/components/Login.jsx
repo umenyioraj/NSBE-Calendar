@@ -17,7 +17,7 @@ const Login = () => {
     const payload = { username, password };
 
     try {
-        const response = await fetch('https://nsbe-calendar.onrender.com/login', {
+        const response = await fetch('https://nsbe-calendar.onrender.com/api/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
