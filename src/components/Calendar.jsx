@@ -98,9 +98,13 @@ const Calendar = () => {
                     <button onClick={handleAboutUsClick}>About Us</button>
                 </a>
             </div>
+            <div className="calendar-header">
+                Week of August 26th-30th
+                </div>
             <div className="calendar">
                 <table>
                     <thead>
+                        
                         <tr>
                             <th></th>
                             <th>Sunday</th>
@@ -113,7 +117,7 @@ const Calendar = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {["8am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"].map((time, i) => (
+                        {["8am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", '6pm', '7pm', '8pm'].map((time, i) => (
                             <tr key={i}>
                                 <td className="time">{time}</td>
                                 {["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"].map((day, j) => (
